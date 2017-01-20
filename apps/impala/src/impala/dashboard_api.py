@@ -51,7 +51,7 @@ class SQLApi():
     filters = self._get_fq(dashboard, query, facet)
 
     if facet:
-      if facet['type'] == 'field':
+      if facet['type'] == 'nested':
         fields = [facet['field']] + [f['field'] for f in facet['properties']['facets']]
         fields = ['`%s`' % f for f in fields]
 

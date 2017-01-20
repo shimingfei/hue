@@ -1717,8 +1717,8 @@ var SearchViewModel = function (collection_json, query_json, initial_json) {
               }
               histoFacet.extraSeries(_series);
             }
+            self.response.valueHasMutated();
           }
-          self.response.valueHasMutated();
         }
       })
       .fail(function (xhr, textStatus, errorThrown) {
